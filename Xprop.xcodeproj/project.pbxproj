@@ -1,0 +1,278 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DDDF9488171ECDE9004E5084 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDDF9487171ECDE9004E5084 /* AppKit.framework */; };
+		DDDF948A171ECDE9004E5084 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDDF9489171ECDE9004E5084 /* Foundation.framework */; };
+		DDDF9490171ECDE9004E5084 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DDDF948E171ECDE9004E5084 /* InfoPlist.strings */; };
+		DDDF9493171ECDE9004E5084 /* Xprop.m in Sources */ = {isa = PBXBuildFile; fileRef = DDDF9492171ECDE9004E5084 /* Xprop.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DDDF9484171ECDE9004E5084 /* Xprop.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Xprop.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDDF9487171ECDE9004E5084 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		DDDF9489171ECDE9004E5084 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DDDF948D171ECDE9004E5084 /* Xprop-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Xprop-Info.plist"; sourceTree = "<group>"; };
+		DDDF948F171ECDE9004E5084 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DDDF9491171ECDE9004E5084 /* Xprop.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Xprop.h; sourceTree = "<group>"; };
+		DDDF9492171ECDE9004E5084 /* Xprop.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Xprop.m; sourceTree = "<group>"; };
+		DDDF9494171ECDE9004E5084 /* Xprop-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Xprop-Prefix.pch"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DDDF9481171ECDE9004E5084 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDDF9488171ECDE9004E5084 /* AppKit.framework in Frameworks */,
+				DDDF948A171ECDE9004E5084 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DDDF947B171ECDE9004E5084 = {
+			isa = PBXGroup;
+			children = (
+				DDDF948B171ECDE9004E5084 /* Xprop */,
+				DDDF9486171ECDE9004E5084 /* Frameworks */,
+				DDDF9485171ECDE9004E5084 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DDDF9485171ECDE9004E5084 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DDDF9484171ECDE9004E5084 /* Xprop.xcplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DDDF9486171ECDE9004E5084 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DDDF9487171ECDE9004E5084 /* AppKit.framework */,
+				DDDF9489171ECDE9004E5084 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DDDF948B171ECDE9004E5084 /* Xprop */ = {
+			isa = PBXGroup;
+			children = (
+				DDDF9491171ECDE9004E5084 /* Xprop.h */,
+				DDDF9492171ECDE9004E5084 /* Xprop.m */,
+				DDDF948C171ECDE9004E5084 /* Supporting Files */,
+			);
+			path = Xprop;
+			sourceTree = "<group>";
+		};
+		DDDF948C171ECDE9004E5084 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DDDF948D171ECDE9004E5084 /* Xprop-Info.plist */,
+				DDDF948E171ECDE9004E5084 /* InfoPlist.strings */,
+				DDDF9494171ECDE9004E5084 /* Xprop-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DDDF9483171ECDE9004E5084 /* Xprop */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DDDF9497171ECDE9004E5084 /* Build configuration list for PBXNativeTarget "Xprop" */;
+			buildPhases = (
+				DDDF9480171ECDE9004E5084 /* Sources */,
+				DDDF9481171ECDE9004E5084 /* Frameworks */,
+				DDDF9482171ECDE9004E5084 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Xprop;
+			productName = Xprop;
+			productReference = DDDF9484171ECDE9004E5084 /* Xprop.xcplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DDDF947C171ECDE9004E5084 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = Shpakovski;
+			};
+			buildConfigurationList = DDDF947F171ECDE9004E5084 /* Build configuration list for PBXProject "Xprop" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DDDF947B171ECDE9004E5084;
+			productRefGroup = DDDF9485171ECDE9004E5084 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DDDF9483171ECDE9004E5084 /* Xprop */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DDDF9482171ECDE9004E5084 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDDF9490171ECDE9004E5084 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DDDF9480171ECDE9004E5084 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDDF9493171ECDE9004E5084 /* Xprop.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DDDF948E171ECDE9004E5084 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DDDF948F171ECDE9004E5084 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DDDF9495171ECDE9004E5084 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		DDDF9496171ECDE9004E5084 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		DDDF9498171ECDE9004E5084 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Xprop/Xprop-Prefix.pch";
+				INFOPLIST_FILE = "Xprop/Xprop-Info.plist";
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Debug;
+		};
+		DDDF9499171ECDE9004E5084 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Xprop/Xprop-Prefix.pch";
+				INFOPLIST_FILE = "Xprop/Xprop-Info.plist";
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DDDF947F171ECDE9004E5084 /* Build configuration list for PBXProject "Xprop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDDF9495171ECDE9004E5084 /* Debug */,
+				DDDF9496171ECDE9004E5084 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DDDF9497171ECDE9004E5084 /* Build configuration list for PBXNativeTarget "Xprop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDDF9498171ECDE9004E5084 /* Debug */,
+				DDDF9499171ECDE9004E5084 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DDDF947C171ECDE9004E5084 /* Project object */;
+}
