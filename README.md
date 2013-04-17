@@ -6,6 +6,14 @@ Xcode has got a shortcut `Control-6` or `View ➭ Standard Editor ➭ Show Docum
 
 The plugin Xprop will hide all garbage from the Document Items menu. As result, no more distraction.
 
+## Installation
+
+Click the ZIP button to download a project, open it in Xcode and press `Command-B` or `Product ➭ Build`, then realunch Xcode and move the project into Trash.
+
+## Usage
+
+Hit the command `View ➭ Standard Editor ➭ Hide Properties from Document Items` in the main menu.
+
 ## Support
 
 Please contact me in [Twitter](http://twitter.com/vadimshpakovski) if something does not work or you have any questions.
