@@ -72,7 +72,7 @@
         // Now menuItem should be removed from the popup menu. However, its represented objects is observable.
         // As result, we cannot use [menu removeItem:menuItem]. The method [menuItem setHidden:NO] does not work.
         // So, we make an item invisible by setting its custom view to the empty object. This works like a charm.
-        [menuItem setView:[[NSView alloc] initWithFrame:CGRectZero]];
+        [menuItem setView:[[[NSView alloc] initWithFrame:CGRectZero] autorelease]];
     }
 }
 
