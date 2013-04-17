@@ -50,8 +50,8 @@
 		DDDF947B171ECDE9004E5084 = {
 			isa = PBXGroup;
 			children = (
-				DD20B44E171F03AF008609FF /* Vendor */,
 				DDDF948B171ECDE9004E5084 /* Xprop */,
+				DD20B44E171F03AF008609FF /* Vendor */,
 				DDDF948C171ECDE9004E5084 /* Supporting Files */,
 				DDDF9486171ECDE9004E5084 /* Frameworks */,
 				DDDF9485171ECDE9004E5084 /* Products */,
@@ -226,7 +226,8 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEPLOYMENT_LOCATION = YES;
 				DSTROOT = "$(HOME)";
-				GCC_ENABLE_OBJC_GC = required;
+				GCC_ENABLE_OBJC_GC = unsupported;
+				"GCC_ENABLE_OBJC_GC[arch=x86_64]" = supported;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Xprop/Xprop-Prefix.pch";
 				INFOPLIST_FILE = "Xprop/Xprop-Info.plist";
@@ -242,7 +243,8 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEPLOYMENT_LOCATION = YES;
 				DSTROOT = "$(HOME)";
-				GCC_ENABLE_OBJC_GC = required;
+				GCC_ENABLE_OBJC_GC = unsupported;
+				"GCC_ENABLE_OBJC_GC[arch=x86_64]" = supported;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Xprop/Xprop-Prefix.pch";
 				INFOPLIST_FILE = "Xprop/Xprop-Info.plist";
