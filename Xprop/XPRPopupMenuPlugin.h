@@ -1,0 +1,2 @@
+@interface XPRPopupMenuPlugin : NSObject
+@end

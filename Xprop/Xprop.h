@@ -1,2 +1,0 @@
-@interface Xprop : NSObject
-@end

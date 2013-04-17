@@ -11,7 +11,7 @@
 		DDDF9488171ECDE9004E5084 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDDF9487171ECDE9004E5084 /* AppKit.framework */; };
 		DDDF948A171ECDE9004E5084 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDDF9489171ECDE9004E5084 /* Foundation.framework */; };
 		DDDF9490171ECDE9004E5084 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DDDF948E171ECDE9004E5084 /* InfoPlist.strings */; };
-		DDDF9493171ECDE9004E5084 /* Xprop.m in Sources */ = {isa = PBXBuildFile; fileRef = DDDF9492171ECDE9004E5084 /* Xprop.m */; };
+		DDDF9493171ECDE9004E5084 /* XPRPopupMenuPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = DDDF9492171ECDE9004E5084 /* XPRPopupMenuPlugin.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,8 +22,8 @@
 		DDDF9489171ECDE9004E5084 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DDDF948D171ECDE9004E5084 /* Xprop-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Xprop-Info.plist"; sourceTree = "<group>"; };
 		DDDF948F171ECDE9004E5084 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		DDDF9491171ECDE9004E5084 /* Xprop.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Xprop.h; sourceTree = "<group>"; };
-		DDDF9492171ECDE9004E5084 /* Xprop.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Xprop.m; sourceTree = "<group>"; };
+		DDDF9491171ECDE9004E5084 /* XPRPopupMenuPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPRPopupMenuPlugin.h; sourceTree = "<group>"; };
+		DDDF9492171ECDE9004E5084 /* XPRPopupMenuPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPRPopupMenuPlugin.m; sourceTree = "<group>"; };
 		DDDF9494171ECDE9004E5084 /* Xprop-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Xprop-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,8 +72,8 @@
 			children = (
 				DDA62F11171ED436002AD133 /* JRSwizzle.h */,
 				DDA62F12171ED436002AD133 /* JRSwizzle.m */,
-				DDDF9491171ECDE9004E5084 /* Xprop.h */,
-				DDDF9492171ECDE9004E5084 /* Xprop.m */,
+				DDDF9491171ECDE9004E5084 /* XPRPopupMenuPlugin.h */,
+				DDDF9492171ECDE9004E5084 /* XPRPopupMenuPlugin.m */,
 			);
 			path = Xprop;
 			sourceTree = "<group>";
@@ -151,7 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDDF9493171ECDE9004E5084 /* Xprop.m in Sources */,
+				DDDF9493171ECDE9004E5084 /* XPRPopupMenuPlugin.m in Sources */,
 				DDA62F13171ED436002AD133 /* JRSwizzle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
