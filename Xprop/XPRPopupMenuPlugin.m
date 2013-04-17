@@ -53,7 +53,7 @@ static XPRPopupMenuPlugin *XPRSharedPlugin = nil;
                                                     withMethod:@selector(XPR_populatePopUpMenu:withItems:) error:outError];
 }
 
-#pragma mark - Preference
+#pragma mark - Settings
 
 NSString *const XPRCleanupDocumentItems = @"XPRCleanupDocumentItems";
 
@@ -68,7 +68,7 @@ NSString *const XPRCleanupDocumentItems = @"XPRCleanupDocumentItems";
     [self resetMenuItem];
 }
 
-#pragma mark - Menu
+#pragma mark - Xcode menu
 
 - (void)addToggleMenuItem
 {
@@ -98,7 +98,7 @@ NSString *const XPRCleanupDocumentItems = @"XPRCleanupDocumentItems";
 
 @end
 
-#pragma mark -
+#pragma mark - Hacking
 
 @implementation NSObject (XPR_Swizzling)
 
