@@ -2,7 +2,7 @@
 #import "JRSwizzle.h"
 
 @implementation XPRPopupMenuPlugin {
-    NSMenuItem *_toggleMenuItem;
+    NSMenuItem *_XcodeMenuItem;
 }
 
 static XPRPopupMenuPlugin *XPRSharedPlugin = nil;
@@ -31,7 +31,7 @@ static XPRPopupMenuPlugin *XPRSharedPlugin = nil;
             NSLog(@"Cannot load %@: %@", [self pluginNameWithBundle:bundle], swizzleError);
 
         // Add a custom menu item
-        [self addToggleMenuItem];
+        [self createXcodeMenuItem];
     }
     return self;
 }
@@ -55,22 +55,22 @@ static XPRPopupMenuPlugin *XPRSharedPlugin = nil;
 
 #pragma mark - Settings
 
-NSString *const XPRCleanupDocumentItems = @"XPRCleanupDocumentItems";
+NSString *const XPRHidesProperiesFromDocumentItems = @"XPRHidesProperiesFromDocumentItems";
 
-- (BOOL)isOn
+- (BOOL)hidesPropertiesFromDocumentItems
 {
-    return [[NSUserDefaults standardUserDefaults] boolForKey:XPRCleanupDocumentItems];
+    return [[NSUserDefaults standardUserDefaults] boolForKey:XPRHidesProperiesFromDocumentItems];
 }
 
-- (void)setOn:(BOOL)on
+- (void)setHidesPropertiesFromDocumentItems:(BOOL)hidesPropertiesFromDocumentItems
 {
-    [[NSUserDefaults standardUserDefaults] setBool:on forKey:XPRCleanupDocumentItems];
+    [[NSUserDefaults standardUserDefaults] setBool:hidesPropertiesFromDocumentItems forKey:XPRHidesProperiesFromDocumentItems];
     [self resetMenuItem];
 }
 
 #pragma mark - Xcode menu
 
-- (void)addToggleMenuItem
+- (void)createXcodeMenuItem
 {
     // Add separator after the last menu item
     NSMenuItem *viewMenuItem = [[NSApp mainMenu] itemWithTitle:@"View"];
@@ -79,21 +79,22 @@ NSString *const XPRCleanupDocumentItems = @"XPRCleanupDocumentItems";
     [standardItemsMenu addItem:[NSMenuItem separatorItem]];
 
     // Add the toggle menu item in the bottom
-    _toggleMenuItem = [[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Cleanup Document Items", @"Menu title for Cleanup Document Items")
-                                                 action:@selector(toggleCleanupDocumentItems:) keyEquivalent:@""];
-    _toggleMenuItem.target = self;
-    [standardItemsMenu addItem:_toggleMenuItem];
+    _XcodeMenuItem = [[NSMenuItem alloc] initWithTitle:@"" action:@selector(toggleProperties:) keyEquivalent:@""];
+    _XcodeMenuItem.target = self;
+    [standardItemsMenu addItem:_XcodeMenuItem];
+    [self resetMenuItem];
 }
 
-- (void)toggleCleanupDocumentItems:(id)sender
+- (void)toggleProperties:(id)sender
 {
-    self.on = !self.on;
-    [self resetMenuItem];
+    self.hidesPropertiesFromDocumentItems = !self.hidesPropertiesFromDocumentItems;
 }
 
 - (void)resetMenuItem
 {
-    _toggleMenuItem.state = (self.on ? NSOnState : NSOffState);
+    _XcodeMenuItem.title = (self.hidesPropertiesFromDocumentItems
+                             ? NSLocalizedString(@"Show Properties in Document Items", @"Menu title for showing properties and synthesizers")
+                             : NSLocalizedString(@"Hide Properties from Document Items", @"Menu title for hiding properties and synthesizers"));
 }
 
 @end
@@ -108,7 +109,7 @@ NSString *const XPRCleanupDocumentItems = @"XPRCleanupDocumentItems";
     [self XPR_populatePopUpMenu:menu withItems:items];
 
     // Do not modify menu if the plugin is disabled
-    if (!XPRSharedPlugin.on) return;
+    if (!XPRSharedPlugin.hidesPropertiesFromDocumentItems) return;
 
     // Next, we hide properties and synthesizers from the popup menu
     for (NSMenuItem *menuItem in menu.itemArray) {
