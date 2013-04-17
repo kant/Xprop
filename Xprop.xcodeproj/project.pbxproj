@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DDA62F13171ED436002AD133 /* JRSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA62F12171ED436002AD133 /* JRSwizzle.m */; };
 		DDDF9488171ECDE9004E5084 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDDF9487171ECDE9004E5084 /* AppKit.framework */; };
 		DDDF948A171ECDE9004E5084 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDDF9489171ECDE9004E5084 /* Foundation.framework */; };
 		DDDF9490171ECDE9004E5084 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DDDF948E171ECDE9004E5084 /* InfoPlist.strings */; };
@@ -14,6 +15,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DDA62F11171ED436002AD133 /* JRSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRSwizzle.h; sourceTree = "<group>"; };
+		DDA62F12171ED436002AD133 /* JRSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRSwizzle.m; sourceTree = "<group>"; };
 		DDDF9484171ECDE9004E5084 /* Xprop.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Xprop.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDDF9487171ECDE9004E5084 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		DDDF9489171ECDE9004E5084 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -41,6 +44,7 @@
 			isa = PBXGroup;
 			children = (
 				DDDF948B171ECDE9004E5084 /* Xprop */,
+				DDDF948C171ECDE9004E5084 /* Supporting Files */,
 				DDDF9486171ECDE9004E5084 /* Frameworks */,
 				DDDF9485171ECDE9004E5084 /* Products */,
 			);
@@ -66,9 +70,10 @@
 		DDDF948B171ECDE9004E5084 /* Xprop */ = {
 			isa = PBXGroup;
 			children = (
+				DDA62F11171ED436002AD133 /* JRSwizzle.h */,
+				DDA62F12171ED436002AD133 /* JRSwizzle.m */,
 				DDDF9491171ECDE9004E5084 /* Xprop.h */,
 				DDDF9492171ECDE9004E5084 /* Xprop.m */,
-				DDDF948C171ECDE9004E5084 /* Supporting Files */,
 			);
 			path = Xprop;
 			sourceTree = "<group>";
@@ -81,6 +86,7 @@
 				DDDF9494171ECDE9004E5084 /* Xprop-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			path = Xprop;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDDF9493171ECDE9004E5084 /* Xprop.m in Sources */,
+				DDA62F13171ED436002AD133 /* JRSwizzle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +278,7 @@
 				DDDF9499171ECDE9004E5084 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
