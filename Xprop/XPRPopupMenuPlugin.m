@@ -129,6 +129,9 @@ NSString *const XPRHidesProperiesFromDocumentItems = @"XPRHidesProperiesFromDocu
         // As result, we cannot use [menu removeItem:menuItem]. The method [menuItem setHidden:NO] does not work.
         // So, we make an item invisible by setting its custom view to the empty object. This works like a charm.
         [menuItem setView:[[[NSView alloc] initWithFrame:CGRectZero] autorelease]];
+
+        // Also, we disable the item to skip it when using keys Up and Down
+        [menuItem setEnabled:NO];
     }
 }
 
