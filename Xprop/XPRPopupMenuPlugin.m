@@ -1,5 +1,6 @@
 #import "XPRPopupMenuPlugin.h"
 #import "JRSwizzle.h"
+#import <objc/runtime.h>
 
 @implementation XPRPopupMenuPlugin {
     NSMenuItem *_XcodeMenuItem;
@@ -49,8 +50,10 @@ static XPRPopupMenuPlugin *XPRSharedPlugin = nil;
 - (BOOL)replaceXcodeImplementationWithError:(NSError **)outError
 {
     // Replace -[IDEPathCell populatePopUpMenu:withItems:] with custom implementation
-    return [NSClassFromString(@"IDEPathCell") jr_swizzleMethod:@selector(populatePopUpMenu:withItems:)
-                                                    withMethod:@selector(XPR_populatePopUpMenu:withItems:) error:outError];
+    return ([NSClassFromString(@"IDEPathCell") jr_swizzleMethod:@selector(populatePopUpMenu:withItems:)
+                                                     withMethod:@selector(XPR_populatePopUpMenu:withItems:) error:outError] &&
+            [NSClassFromString(@"IDEPathCell") jr_swizzleMethod:@selector(popUpMenuForComponentCell:inRect:ofView:)
+                                                     withMethod:@selector(XPR_popUpMenuForComponentCell:inRect:ofView:) error:outError]);
 }
 
 #pragma mark - Settings
@@ -103,6 +106,20 @@ NSString *const XPRHidesProperiesFromDocumentItems = @"XPRHidesProperiesFromDocu
 
 @implementation NSObject (XPR_Swizzling)
 
+const void *XPRLastItemKey = &XPRLastItemKey;
+
+- (void)XPR_popUpMenuForComponentCell:(NSPathComponentCell *)componentCell inRect:(CGRect)rect ofView:(NSView *)view
+{
+    // Notify the nested about the position of the cell in a row
+    NSArray *componentCells = [self valueForKey:@"pathComponentCells"];
+    BOOL isLastItem = (componentCell == componentCells.lastObject);
+    objc_setAssociatedObject(self, XPRLastItemKey, @(isLastItem), OBJC_ASSOCIATION_COPY);
+
+    [self XPR_popUpMenuForComponentCell:componentCell inRect:rect ofView:view];
+
+    objc_setAssociatedObject(self, XPRLastItemKey, nil, OBJC_ASSOCIATION_COPY);
+}
+
 - (void)XPR_populatePopUpMenu:(NSMenu *)menu withItems:(NSArray *)items
 {
     // First, Xcode fills the popup menu with default document items
@@ -111,12 +128,9 @@ NSString *const XPRHidesProperiesFromDocumentItems = @"XPRHidesProperiesFromDocu
     // Do not modify menu if the plugin is disabled
     if (!XPRSharedPlugin.hidesPropertiesFromDocumentItems) return;
 
-    // Retrieve sibling cells to check out self position
-    NSArray *cells = nil;
-    @try { cells = [self valueForKeyPath:@"delegate.navBar.pathControl.pathComponentCells"]; } @catch (NSException *exception) { }
-
     // We should hide properties only in the last Document Items cell
-    if (cells.lastObject != self) return;
+    BOOL isLastItem = [objc_getAssociatedObject(self, XPRLastItemKey) boolValue];
+    if (!isLastItem) return;
 
     // Next, we hide properties and synthesizers from the popup menu
     for (NSMenuItem *menuItem in menu.itemArray) {
