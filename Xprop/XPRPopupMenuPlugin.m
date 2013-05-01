@@ -111,6 +111,13 @@ NSString *const XPRHidesProperiesFromDocumentItems = @"XPRHidesProperiesFromDocu
     // Do not modify menu if the plugin is disabled
     if (!XPRSharedPlugin.hidesPropertiesFromDocumentItems) return;
 
+    // Retrieve sibling cells to check out self position
+    NSArray *cells = nil;
+    @try { cells = [self valueForKeyPath:@"delegate.navBar.pathControl.pathComponentCells"]; } @catch (NSException *exception) { }
+
+    // We should hide properties only in the last Document Items cell
+    if (cells.lastObject != self) return;
+
     // Next, we hide properties and synthesizers from the popup menu
     for (NSMenuItem *menuItem in menu.itemArray) {
 
