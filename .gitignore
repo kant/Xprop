@@ -9,6 +9,7 @@ build/*
 !default.perspectivev3
 !default.xcworkspace
 xcuserdata
+*.xccheckout
 profile
 *.moved-aside
 # Finder
