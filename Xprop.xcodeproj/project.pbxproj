@@ -120,7 +120,7 @@
 		DDDF947C171ECDE9004E5084 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Shpakovski;
 			};
 			buildConfigurationList = DDDF947F171ECDE9004E5084 /* Build configuration list for PBXProject "Xprop" */;
@@ -226,8 +226,6 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEPLOYMENT_LOCATION = YES;
 				DSTROOT = "$(HOME)";
-				GCC_ENABLE_OBJC_GC = unsupported;
-				"GCC_ENABLE_OBJC_GC[arch=x86_64]" = supported;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Xprop/Xprop-Prefix.pch";
 				INFOPLIST_FILE = "Xprop/Xprop-Info.plist";
@@ -243,8 +241,6 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEPLOYMENT_LOCATION = YES;
 				DSTROOT = "$(HOME)";
-				GCC_ENABLE_OBJC_GC = unsupported;
-				"GCC_ENABLE_OBJC_GC[arch=x86_64]" = supported;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Xprop/Xprop-Prefix.pch";
 				INFOPLIST_FILE = "Xprop/Xprop-Info.plist";
