@@ -1,6 +1,0 @@
-//
-// Prefix header for all source files of the 'Xprop' target in the 'Xprop' project
-//
-
-#import <AppKit/AppKit.h>
-#import <Foundation/Foundation.h>
