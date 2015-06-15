@@ -49,8 +49,8 @@ static XPRPopupMenuPlugin *XPRSharedPlugin = nil;
 
 - (BOOL)replaceXcodeImplementationWithError:(NSError **)outError
 {
-    // Replace -[IDEPathCell populatePopUpMenu:withItems:] with custom implementation
-    return ([NSClassFromString(@"IDEPathCell") jr_swizzleMethod:@selector(populatePopUpMenu:withItems:)
+    // Replace -[IDEPathCell _populatePopUpMenu:withItems:] with custom implementation
+    return ([NSClassFromString(@"IDEPathCell") jr_swizzleMethod:@selector(_populatePopUpMenu:withItems:)
                                                      withMethod:@selector(XPR_populatePopUpMenu:withItems:) error:outError] &&
             [NSClassFromString(@"IDEPathCell") jr_swizzleMethod:@selector(popUpMenuForComponentCell:inRect:ofView:)
                                                      withMethod:@selector(XPR_popUpMenuForComponentCell:inRect:ofView:) error:outError]);
