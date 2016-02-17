@@ -31,8 +31,10 @@ static XPRPopupMenuPlugin *XPRSharedPlugin = nil;
         else
             NSLog(@"Cannot load %@: %@", [self pluginNameWithBundle:bundle], swizzleError);
 
-        // Add a custom menu item
-        [self createXcodeMenuItem];
+        // Add a custom menu item in the next Run Loop when the View menu is available
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            [self createXcodeMenuItem];
+        }];
     }
     return self;
 }
