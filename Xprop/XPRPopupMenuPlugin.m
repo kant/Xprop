@@ -12,9 +12,12 @@ static XPRPopupMenuPlugin *XPRSharedPlugin = nil;
 {
     // Plugin should be loaded only once
     static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        XPRSharedPlugin = [[[self class] alloc] initWithBundle:bundle];
-    });
+    NSString *currentApplicationName = [[NSBundle mainBundle] infoDictionary][@"CFBundleName"];
+    if ([currentApplicationName isEqual:@"Xcode"]) {
+        dispatch_once(&onceToken, ^{
+            XPRSharedPlugin = [[[self class] alloc] initWithBundle:bundle];
+        });
+    }
 }
 
 #pragma mark -
