@@ -8,7 +8,7 @@ The plugin Xprop will hide all garbage from the Document Items menu. As result, 
 
 ## Installation
 
-Click the ZIP button to download a project, open it in Xcode and press `Command-B` or `Product ➭ Build`, then realunch Xcode and move the project into Trash.
+Click the ZIP button to download a project, open it in Xcode and press `Command-B` or `Product ➭ Build`, then relaunch Xcode and move the project into Trash.
 
 ## Usage
 
